@@ -28,7 +28,7 @@
 
                 </div>
             </div>
-            <!-- /#sidebar-wrapper -->
+            <!-- Fim Sidebar -->
 
             <!-- Conteúdo da página -->
             <div id="page-content-wrapper">
@@ -59,11 +59,11 @@
         </div>
         <!-- Fim Conteudo -->
 
-        <!-- Bootstrap core JavaScript -->
+        <!-- Bootstrap para JavaScript -->
         <script src="jquery/jquery.min.js"></script>
         <script src="js/boostrap/bootstrap.bundle.min.js"></script> 
 
-        <!-- Menu Toggle Script -->
+        <!-- Menu lateral script -->
         <script>
             $("#btnMenuLateral").click(function (e) {
                 e.preventDefault();
