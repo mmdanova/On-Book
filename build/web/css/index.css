@@ -1,0 +1,83 @@
+body {
+  overflow-x: hidden;
+}
+
+.hidden_div{
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  top: 50px;
+  left: 94%;
+  margin-left: -150px;
+  border: 2px solid #cccccc;
+  overflow: hidden;
+  clear: both;
+}
+
+#sidebar-wrapper {
+  min-height: 100vh;
+  margin-left: -15rem;
+  -webkit-transition: margin .25s ease-out;
+  -moz-transition: margin .25s ease-out;
+  -o-transition: margin .25s ease-out;
+  transition: margin .25s ease-out;
+}
+
+#sidebar-wrapper{
+  font-size: 1.2rem;
+}
+
+#logo {
+    padding: 20px;
+}
+
+#ContainerForm {
+    padding: 40px;
+    padding-top: 70px;
+}
+
+#ContainerList {
+    padding: 40px;
+    padding-top: 50px;
+    margin-left: 70px;
+    height:600px;
+    overflow-y: scroll;
+}
+
+#autores {
+    height:400px;
+    overflow-y: scroll;
+}
+
+#categorias{
+  height:400px;
+  overflow-y: scroll;
+}
+
+
+#sidebar-wrapper .list-group {
+  width: 15rem;
+}
+
+#page-content-wrapper {
+  min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+}
+
+@media (min-width: 768px) {
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -15rem;
+  }
+}
