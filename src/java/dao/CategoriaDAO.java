@@ -55,7 +55,7 @@ public class CategoriaDAO {
             pstm.close();
 
         } catch (Exception e) {
-            throw new RuntimeException("Erro ao inserir categoria " + e);
+            throw new RuntimeException("Erro ao inserir categoria sql " + e);
         }
     }
 
