@@ -15,22 +15,22 @@
       <div class="border-white bg-white" id="sidebar-wrapper">
         <h1 class="sidebar-heading text-center" id="logo">OnBook</h1>
         <div class="list-group list-group-flush">
-          <a href="index.html" class="border-white list-group-item list-group-item-action">
+          <a href="index.jsp" class="border-white list-group-item list-group-item-action">
             <img src="img/livro.png" style="width: 30px; height: 30px"><b> Livros</b>
           </a>
           <a href="autores.jsp" class="border-white list-group-item list-group-item-action">
             <img src="img/autor.png" style="width: 30px; height: 30px"><b> Autores</b>
           </a>
-          <a href="categorias.html" class="border-white list-group-item list-group-item-action">
+          <a href="categorias.jsp" class="border-white list-group-item list-group-item-action">
             <img src="img/categorias.png" style="width: 30px; height: 30px"><b> Categorias</b>
           </a>
-          <a href="bibliotecas.html" class="border-white list-group-item list-group-item-action bg-light">
+          <a href="bibliotecas.jsp" class="border-white list-group-item list-group-item-action bg-light">
             <img src="img/biblioteca.png" style="width: 30px; height: 30px"><b> Bibliotecas</b>
           </a>
-          <a href="emprestimo.html" class="border-white list-group-item list-group-item-action">
-            <img src="img/emprestimo.png" style="width: 30px; height: 32px"><b> Empr√©stimos</b>
+          <a href="emprestimo.jsp" class="border-white list-group-item list-group-item-action">
+            <img src="img/emprestimo.png" style="width: 30px; height: 32px"><b> EmprÈstimos</b>
           </a>
-          <a href="perfil.html" class="border-white list-group-item list-group-item-action">
+          <a href="perfil.jsp" class="border-white list-group-item list-group-item-action">
             <img src="img/perfil.png" style="width: 30px; height: 30px"><b> Meu Perfil</b>
           </a>
         </div>
@@ -50,9 +50,9 @@
 
             <div class="card mb-6" style="width: 17rem; margin: 25px">
                 <div class="card-body">
-                    <h5 class="card-title">Biblioteca Municipal de Palho√ßa</h5>
+                    <h5 class="card-title">Biblioteca Municipal de PalhoÁa</h5>
                     <div>
-                      <p>R. Padre Mac√°rio, 10 - Centro, S√£o Jos√© - SC, 88103-020</p>
+                      <p>R. Padre Mac·rio, 10 - Centro, S„o JosÈ - SC, 88103-020</p>
                       <label>Contato</label><br>
                       <label>E-mail</label>
                     </div>
@@ -65,9 +65,9 @@
 
             <div class="card mb-6" style="width: 17rem; margin: 25px">
                 <div class="card-body">
-                    <h5 class="card-title">Biblioteca Municipal de S√£o Jos√©</h5>
+                    <h5 class="card-title">Biblioteca Municipal de S„o JosÈ</h5>
                     <div>
-                      <p>R. Padre Mac√°rio, 10 - Centro, S√£o Jos√© - SC, 88103-020</p>
+                      <p>R. Padre Mac·rio, 10 - Centro, S„o JosÈ - SC, 88103-020</p>
                       <label>Contato</label><br>
                       <label>E-mail</label>
                     </div>
@@ -80,9 +80,9 @@
 
             <div class="card mb-6" style="width: 17rem; margin: 25px">
                 <div class="card-body">
-                    <h5 class="card-title">Biblioteca Municipal de Florian√≥polis</h5>
+                    <h5 class="card-title">Biblioteca Municipal de FlorianÛpolis</h5>
                     <div>
-                      <p>R. Padre Mac√°rio, 10 - Centro, S√£o Jos√© - SC, 88103-020</p>
+                      <p>R. Padre Mac·rio, 10 - Centro, S„o JosÈ - SC, 88103-020</p>
                       <label>Contato</label><br>
                       <label>E-mail</label>
                     </div>

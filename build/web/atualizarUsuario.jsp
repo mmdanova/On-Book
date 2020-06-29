@@ -15,22 +15,22 @@
       <div class="border-white bg-white" id="sidebar-wrapper">
         <h1 class="sidebar-heading text-center" id="logo">OnBook</h1>
         <div class="list-group list-group-flush">
-          <a href="index.html" class="border-white list-group-item list-group-item-action">
+          <a href="index.jsp" class="border-white list-group-item list-group-item-action">
             <img src="img/livro.png" style="width: 30px; height: 30px"><b> Livros</b>
           </a>
           <a href="autores.jsp" class="border-white list-group-item list-group-item-action">
             <img src="img/autor.png" style="width: 30px; height: 30px"><b> Autores</b>
           </a>
-          <a href="categorias.html" class="border-white list-group-item list-group-item-action">
+          <a href="categorias.jsp" class="border-white list-group-item list-group-item-action">
             <img src="img/categorias.png" style="width: 30px; height: 30px"><b> Categorias</b>
           </a>
-          <a href="bibliotecas.html" class="border-white list-group-item list-group-item-action">
+          <a href="bibliotecas.jsp" class="border-white list-group-item list-group-item-action">
             <img src="img/biblioteca.png" style="width: 30px; height: 30px"><b> Bibliotecas</b>
           </a>
-          <a href="emprestimo.html" class="border-white list-group-item list-group-item-action">
-            <img src="img/emprestimo.png" style="width: 30px; height: 32px"><b> Empr√©stimos</b>
+          <a href="emprestimo.jsp" class="border-white list-group-item list-group-item-action">
+            <img src="img/emprestimo.png" style="width: 30px; height: 32px"><b> EmprÈstimos</b>
           </a>
-          <a href="perfil.html" class="border-white list-group-item list-group-item-action bg-light">
+          <a href="perfil.jsp" class="border-white list-group-item list-group-item-action bg-light">
             <img src="img/perfil.png" style="width: 30px; height: 30px"><b> Meu Perfil</b>
           </a>
         </div>
@@ -41,7 +41,7 @@
       <div id="page-content-wrapper">
 
         <nav class="navbar bg-dark">
-          <h4 style="color: white">Atualizar Usu√°rio</h4>
+          <h4 style="color: white">Atualizar Usu·rio</h4>
         </nav>
 
         <div class="container-fluid bg-light"  id="ContainerForm">
@@ -50,7 +50,7 @@
             <div class="col-4">
 
               <div class="form-group">
-                <input type="text" class="form-control" id="txtNomeUsuario" placeholder="Nome do Usu√°rio">
+                <input type="text" class="form-control" id="txtNomeUsuario" placeholder="Nome do Usu·rio">
               </div>
 
               <div class="form-group">
@@ -68,7 +68,7 @@
 
               <div class="form-group">
                 <select class="form-control" id="txtTipoUsuario" value="tipoUsuario">
-                  <option disabled selected>Tipo de Usu√°rio</option>
+                  <option disabled selected>Tipo de Usu·rio</option>
                   <option value="estudante">Estudante</option>
                   <option value="professor">Professor</option>
                   <option value="biblioteca">Biblioteca</option>
@@ -84,7 +84,7 @@
                   </div>
                 </div>
                 <div class="col">
-                  <input type="text" class="form-control" id="txtNumero" placeholder="N¬∞">
+                  <input type="text" class="form-control" id="txtNumero" placeholder="N∞">
                 </div>
               </div>
 

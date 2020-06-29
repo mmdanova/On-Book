@@ -15,22 +15,22 @@
       <div class="border-white bg-white" id="sidebar-wrapper">
         <h1 class="sidebar-heading text-center" id="logo">OnBook</h1>
         <div class="list-group list-group-flush">
-          <a href="index.html" class="border-white list-group-item list-group-item-action">
+          <a href="index.jsp" class="border-white list-group-item list-group-item-action">
             <img src="img/livro.png" style="width: 30px; height: 30px"><b> Livros</b>
           </a>
           <a href="autores.jsp" class="border-white list-group-item list-group-item-action">
             <img src="img/autor.png" style="width: 30px; height: 30px"><b> Autores</b>
           </a>
-          <a href="categorias.html" class="border-white list-group-item list-group-item-action">
+          <a href="categorias.jsp" class="border-white list-group-item list-group-item-action">
             <img src="img/categorias.png" style="width: 30px; height: 30px"><b> Categorias</b>
           </a>
-          <a href="bibliotecas.html" class="border-white list-group-item list-group-item-action">
+          <a href="bibliotecas.jsp" class="border-white list-group-item list-group-item-action">
             <img src="img/biblioteca.png" style="width: 30px; height: 30px"><b> Bibliotecas</b>
           </a>
-          <a href="emprestimo.html" class="border-white list-group-item list-group-item-action bg-light">
-            <img src="img/emprestimo.png" style="width: 30px; height: 32px"><b> Empr√©stimos</b>
+          <a href="emprestimo.jsp" class="border-white list-group-item list-group-item-action bg-light">
+            <img src="img/emprestimo.png" style="width: 30px; height: 32px"><b> EmprÈstimos</b>
           </a>
-          <a href="perfil.html" class="border-white list-group-item list-group-item-action">
+          <a href="perfil.jsp" class="border-white list-group-item list-group-item-action">
             <img src="img/perfil.png" style="width: 30px; height: 30px"><b> Meu Perfil</b>
           </a>
         </div>
@@ -41,7 +41,7 @@
       <div id="page-content-wrapper">
 
         <nav class="navbar bg-dark">
-          <h4 style="color: white">Empr√©stimo Detalhado</h4>
+          <h4 style="color: white">EmprÈstimo Detalhado</h4>
           <a href="emprestimo.html"><img src="img/voltar.png" style="width: 30px; height: 30px; margin-right: 20px;"></a>
         </nav>
 
@@ -75,8 +75,8 @@
                     <label><b>Data Final: </b></label><label id="idDataFinal"> 06/06/2020</label><br>
                     <div class="row">
                       <div class="col">
-                        <label><b>Biblioteca: </b></label><p id="idNomeBiblioteca">Biblioteca Municipal de S√£o Jos√©</p>
-                        <label><b>Localiza√ß√£o: </b></label><p id="idLocalizacao">R. Padre Mac√°rio, 10 - Centro, S√£o Jos√© - SC, 88103-020</p>                      
+                        <label><b>Biblioteca: </b></label><p id="idNomeBiblioteca">Biblioteca Municipal de S„o JosÈ</p>
+                        <label><b>LocalizaÁ„o: </b></label><p id="idLocalizacao">R. Padre Mac·rio, 10 - Centro, S„o JosÈ - SC, 88103-020</p>                      
                       </div>
                     </div>
                   </div>
@@ -85,7 +85,7 @@
                   </div>
                 </div>
                 <div class="form-group float-right">
-                  <button type="submit" id="btnEmprestimo" class="btn btn-primary" style="margin: 20px">Finalizar Empr√©stimo</button>
+                  <button type="submit" id="btnEmprestimo" class="btn btn-primary" style="margin: 20px">Finalizar EmprÈstimo</button>
                 </div>
               </div>
             </div>

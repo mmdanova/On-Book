@@ -15,22 +15,22 @@
       <div class="border-white bg-white" id="sidebar-wrapper">
         <h1 class="sidebar-heading text-center" id="logo">OnBook</h1>
         <div class="list-group list-group-flush">
-          <a href="index.html" class="border-white list-group-item list-group-item-action">
+          <a href="index.jsp" class="border-white list-group-item list-group-item-action">
             <img src="img/livro.png" style="width: 30px; height: 30px"><b> Livros</b>
           </a>
           <a href="autores.jsp" class="border-white list-group-item list-group-item-action">
             <img src="img/autor.png" style="width: 30px; height: 30px"><b> Autores</b>
           </a>
-          <a href="categorias.html" class="border-white list-group-item list-group-item-action">
+          <a href="categorias.jsp" class="border-white list-group-item list-group-item-action">
             <img src="img/categorias.png" style="width: 30px; height: 30px"><b> Categorias</b>
           </a>
-          <a href="bibliotecas.html" class="border-white list-group-item list-group-item-action">
+          <a href="bibliotecas.jsp" class="border-white list-group-item list-group-item-action">
             <img src="img/biblioteca.png" style="width: 30px; height: 30px"><b> Bibliotecas</b>
           </a>
-          <a href="emprestimo.html" class="border-white list-group-item list-group-item-action">
-            <img src="img/emprestimo.png" style="width: 30px; height: 32px"><b> Empr√©stimos</b>
+          <a href="emprestimo.jsp" class="border-white list-group-item list-group-item-action">
+            <img src="img/emprestimo.png" style="width: 30px; height: 32px"><b> EmprÈstimos</b>
           </a>
-          <a href="perfil.html" class="border-white list-group-item list-group-item-action bg-light">
+          <a href="perfil.jsp" class="border-white list-group-item list-group-item-action bg-light">
             <img src="img/perfil.png" style="width: 30px; height: 30px"><b> Meu Perfil</b>
           </a>
         </div>
@@ -51,12 +51,12 @@
             <div class="col-6">
               <div class="card">
                   <div class="card-body">
-                      <h5 class="card-title" id="idNomeUsuario">Nome Usu√°rio</h5>
+                      <h5 class="card-title" id="idNomeUsuario">Nome Usu·rio</h5>
                       <div>
                         <label><b>Telefone: </b></label><label id="idContato">Telefone</label><br>
                         <label><b>E-mail: </b></label><label id="idEmalCliente">E-mail</label><br>
-                        <label><b>Tipo de Usu√°rio: </b></label><label id="idTipoUsuario">Estudante</label><br>
-                        <label><b>Endere√ßo: </b></label><p id="idEnderecoUsuario">Endere√ßo</p>
+                        <label><b>Tipo de Usu·rio: </b></label><label id="idTipoUsuario">Estudante</label><br>
+                        <label><b>EndereÁo: </b></label><p id="idEnderecoUsuario">EndereÁo</p>
                       </div>
                       <div class="text-center" style="border-top: solid 1px;">
                         <a href="#" class="btn "><img src="img/excluir.png" style="width: 25px; height: 25px"></a>

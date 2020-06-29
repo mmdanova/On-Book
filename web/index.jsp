@@ -15,22 +15,22 @@
       <div class="border-white bg-white" id="sidebar-wrapper">
         <h1 class="sidebar-heading text-center" id="logo">OnBook</h1>
         <div class="list-group list-group-flush">
-          <a href="index.html" class="border-white list-group-item list-group-item-action bg-light">
+          <a href="index.jsp" class="border-white list-group-item list-group-item-action bg-light">
             <img src="img/livro.png" style="width: 30px; height: 30px"><b> Livros</b>
           </a>
           <a href="autores.jsp" class="border-white list-group-item list-group-item-action">
             <img src="img/autor.png" style="width: 30px; height: 30px"><b> Autores</b>
           </a>
-          <a href="categorias.html" class="border-white list-group-item list-group-item-action">
+          <a href="categorias.jsp" class="border-white list-group-item list-group-item-action">
             <img src="img/categorias.png" style="width: 30px; height: 30px"><b> Categorias</b>
           </a>
-          <a href="bibliotecas.html" class="border-white list-group-item list-group-item-action">
+          <a href="bibliotecas.jsp" class="border-white list-group-item list-group-item-action">
             <img src="img/biblioteca.png" style="width: 30px; height: 30px"><b> Bibliotecas</b>
           </a>
-          <a href="emprestimo.html" class="border-white list-group-item list-group-item-action">
-            <img src="img/emprestimo.png" style="width: 30px; height: 32px"><b> EmprÃ©stimos</b>
+          <a href="emprestimo.jsp" class="border-white list-group-item list-group-item-action">
+            <img src="img/emprestimo.png" style="width: 30px; height: 32px"><b> Empréstimos</b>
           </a>
-          <a href="perfil.html" class="border-white list-group-item list-group-item-action">
+          <a href="perfil.jsp" class="border-white list-group-item list-group-item-action">
             <img src="img/perfil.png" style="width: 30px; height: 30px"><b> Meu Perfil</b>
           </a>
         </div>
@@ -41,7 +41,7 @@
       <div id="page-content-wrapper">
 
         <nav class="navbar bg-dark">
-          <h4 style="color: white">ReferÃªncias Cadastradas</h4>
+          <h4 style="color: white">Referências Cadastradas</h4>
           <a href="novaReferencia.html"><img src="img/adicionar.png" style="width: 30px; height: 30px; margin-right: 20px;"></a>
         </nav>
 
