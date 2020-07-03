@@ -22,6 +22,7 @@
                     <input type="text" name="nome" value="<%=nome%>"><br>
 
                     <input class="btn btn-primary" type="submit" value="Salvar">
+                    <a onclick="history.go(-1);" id="btnCancelar" class="btn btn-danger" style="color:white;">Cancelar</a>
                 </form>
 
     </body>

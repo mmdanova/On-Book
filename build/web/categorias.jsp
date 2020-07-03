@@ -79,7 +79,7 @@
                                     out.print("<tr>");
                                     //out.print("<td>" + arrayCategoria.get(i).getId() + "</td>");
                                     out.print("<td>" + arrayCategoria.get(i).getNome() + "</td>");
-                                    out.print("<td><a href='alterarCategoria.jsp?idCategoria=" + arrayCategoria.get(i).getIdCategoria() + "&nome=" + arrayCategoria.get(i).getNome() + "'><img src='img/editar.png' style='width: 25px; height: 25px'></a></td>");
+                                    out.print("<td><a href='atualizarCategoria.jsp?idCategoria=" + arrayCategoria.get(i).getIdCategoria() + "&nome=" + arrayCategoria.get(i).getNome() + "'><img src='img/editar.png' style='width: 25px; height: 25px'></a></td>");
                                     out.print("<td><a href='executa_excluirCategoria.jsp?idCategoria=" + arrayCategoria.get(i).getIdCategoria() + "'><img src='img/excluir.png' style='width: 25px; height: 25px'></a></td>");
                                     out.print("</tr>");
                                 }

@@ -60,7 +60,7 @@
                         <div class="row">
                             <div class="col"></div>
                             <div class="col-4">
-                                
+
                                 <input type="hidden" name="idBiblioteca" value="<%=id%>">
                                 <div class="form-group">
                                     <input type="text" name="nome" class="form-control" id="txtBibliotecao" placeholder="Nome da Biblioteca" value="<%=nome%>">
@@ -103,8 +103,8 @@
                                 </div>
 
                                 <div class="form-group float-right">
-                                    <button type="submit" id="btnCancelar" class="btn btn-danger">Cancelar</button>
                                     <button type="submit" id="btnSalvarBiblioteca" class="btn btn-success">Salvar</button>
+                                    <a onclick="history.go(-1);" id="btnCancelar" class="btn btn-danger" style="color:white;">Cancelar</a>
                                 </div>
 
                             </div>
@@ -112,6 +112,7 @@
                         </div>
                     </div>
                 </form>
+
             </div>
 
         </div>

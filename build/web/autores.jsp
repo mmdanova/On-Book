@@ -77,7 +77,7 @@
                                                     out.print("<tr>");
                                                     //out.print("<td>" + arrayProduto.get(i).getId() + "</td>");
                                                     out.print("<td>" + arrayAutor.get(i).getNome() + "</td>");
-                                                    out.print("<td><a href='alterarAutor.jsp?idAutor=" + arrayAutor.get(i).getIdAutor() + "&nome=" + arrayAutor.get(i).getNome() + "'><img src='img/editar.png' style='width: 25px; height: 25px'></a></td>");
+                                                    out.print("<td><a href='atualizarAutor.jsp?idAutor=" + arrayAutor.get(i).getIdAutor() + "&nome=" + arrayAutor.get(i).getNome() + "'><img src='img/editar.png' style='width: 25px; height: 25px'></a></td>");
                                                     out.print("<td><a href='executa_excluirAutor.jsp?idAutor=" + arrayAutor.get(i).getIdAutor() + "'><img src='img/excluir.png' style='width: 25px; height: 25px'></a></td>");
                                                     out.print("</tr>");
                                                 }
