@@ -52,8 +52,8 @@
                     <div class="row" >
 
                         <div class="col"></div>
-                        <form method="POST" action="executa_inserirAutor.jsp">
-                            <div class="col-4" style="margin: 10px">
+                        <div class="col-4" style="margin: 10px">
+                            <form method="POST" action="executa_inserirAutor.jsp">
                                 <div class="form-group">
                                     <input type="text" class="form-control" id="txtAutores" name="nome" placeholder="Nome do Autor">
                                 </div>
@@ -61,8 +61,8 @@
                                 <div class="form-group float-right">
                                     <button type="submit" id="btnSalvarAutor" class="btn btn-success">Salvar</button>
                                 </div>
-                            </div>
-                        </form>
+                            </form>
+                        </div>
                         <div class="col-4">
                             <h5>Autores</h5>
                             <div  id="autores" style="margin: 10px">
@@ -77,8 +77,8 @@
                                                     out.print("<tr>");
                                                     //out.print("<td>" + arrayProduto.get(i).getId() + "</td>");
                                                     out.print("<td>" + arrayAutor.get(i).getNome() + "</td>");
-                                                    out.print("<td><a href='alterarAutor.jsp?idAutor=" + arrayAutor.get(i).getIdAutor() + "&nome=" + arrayAutor.get(i).getNome() + "'>Editar</a></td>");
-                                                    out.print("<td><a href='executa_excluirAutor.jsp?idAutor=" + arrayAutor.get(i).getIdAutor() + "'>Excluir</a></td>");
+                                                    out.print("<td><a href='alterarAutor.jsp?idAutor=" + arrayAutor.get(i).getIdAutor() + "&nome=" + arrayAutor.get(i).getNome() + "'><img src='img/editar.png' style='width: 25px; height: 25px'></a></td>");
+                                                    out.print("<td><a href='executa_excluirAutor.jsp?idAutor=" + arrayAutor.get(i).getIdAutor() + "'><img src='img/excluir.png' style='width: 25px; height: 25px'></a></td>");
                                                     out.print("</tr>");
                                                 }
                                                 out.print("</tbody>");

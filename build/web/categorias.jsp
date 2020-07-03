@@ -52,19 +52,19 @@
                     <div class="row" >
 
                         <div class="col"></div>
-                        <form method="POST" action="executa_inserirCategoria.jsp">
                         <div class="col-4" style="margin: 10px">
+                            <form method="POST" action="executa_inserirCategoria.jsp">
 
-                            <div class="form-group">
-                                <input name="nome" type="text" class="form-control" id="txtCategoria" placeholder="Categoria">
-                            </div>
+                                <div class="form-group">
+                                    <input name="nome" type="text" class="form-control" id="txtCategoria" placeholder="Categoria">
+                                </div>
 
-                            <div class="form-group float-right">
-                                <button type="submit" id="btnSalvarCategoria" class="btn btn-success">Salvar</button>
-                            </div>
+                                <div class="form-group float-right">
+                                    <button type="submit" id="btnSalvarCategoria" class="btn btn-success">Salvar</button>
+                                </div>
 
+                            </form>
                         </div>
-                        </form>
                         <div class="col-4">
                             <h5>Categorias</h5>
                             <div  id="categorias" style="margin: 10px">
@@ -79,8 +79,8 @@
                                     out.print("<tr>");
                                     //out.print("<td>" + arrayCategoria.get(i).getId() + "</td>");
                                     out.print("<td>" + arrayCategoria.get(i).getNome() + "</td>");
-                                    out.print("<td><a href='alterarCategoria.jsp?idCategoria=" + arrayCategoria.get(i).getIdCategoria() + "&nome=" + arrayCategoria.get(i).getNome() + "'>Editar</a></td>");
-                                    out.print("<td><a href='executa_excluirCategoria.jsp?idCategoria=" + arrayCategoria.get(i).getIdCategoria() + "'>Excluir</a></td>");
+                                    out.print("<td><a href='alterarCategoria.jsp?idCategoria=" + arrayCategoria.get(i).getIdCategoria() + "&nome=" + arrayCategoria.get(i).getNome() + "'><img src='img/editar.png' style='width: 25px; height: 25px'></a></td>");
+                                    out.print("<td><a href='executa_excluirCategoria.jsp?idCategoria=" + arrayCategoria.get(i).getIdCategoria() + "'><img src='img/excluir.png' style='width: 25px; height: 25px'></a></td>");
                                     out.print("</tr>");
                                 }
                                 out.print("</tbody>");
