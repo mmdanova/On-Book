@@ -1,9 +1,3 @@
-<%-- 
-    Document   : alterarAutor
-    Created on : 28/06/2020, 20:29:56
-    Author     : Joao Vitor
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>

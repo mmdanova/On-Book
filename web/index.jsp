@@ -42,7 +42,7 @@
 
         <nav class="navbar bg-dark">
           <h4 style="color: white">Referências Cadastradas</h4>
-          <a href="novaReferencia.html"><img src="img/adicionar.png" style="width: 30px; height: 30px; margin-right: 20px;"></a>
+          <a href="novaReferencia.jsp"><img src="img/adicionar.png" style="width: 30px; height: 30px; margin-right: 20px;"></a>
         </nav>
 
         <div class="container-fluid bg-light" id="ContainerList">
@@ -60,8 +60,8 @@
                     </div>
                     <div class="text-center" id="id" style="border-top: solid 1px;">
                       <a href="#" class="btn "><img src="img/excluir.png" style="width: 25px; height: 25px"></a>
-                      <a href="atualizarReferencia.html" class="btn "><img src="img/editar.png" style="width: 25px; height: 25px"></a>
-                      <a href="livroDetalhado.html" class="btn "><img src="img/visualizar.png" style="width: 30px; height: 25px"></a>
+                      <a href="atualizarReferencia.jsp" class="btn "><img src="img/editar.png" style="width: 25px; height: 25px"></a>
+                      <a href="livroDetalhado.jsp" class="btn "><img src="img/visualizar.png" style="width: 30px; height: 25px"></a>
                   </div>
                 </div>
             </div>
@@ -78,8 +78,8 @@
                     </div>
                     <div class="text-center" id="id" style="border-top: solid 1px;">
                       <a href="#" class="btn "><img src="img/excluir.png" style="width: 25px; height: 25px"></a>
-                      <a href="atualizarReferencia.html" class="btn "><img src="img/editar.png" style="width: 25px; height: 25px"></a>
-                      <a href="livroDetalhado.html" class="btn "><img src="img/visualizar.png" style="width: 30px; height: 25px"></a>
+                      <a href="atualizarReferencia.jsp" class="btn "><img src="img/editar.png" style="width: 25px; height: 25px"></a>
+                      <a href="livroDetalhado.jsp" class="btn "><img src="img/visualizar.png" style="width: 30px; height: 25px"></a>
                   </div>
                 </div>
             </div>
@@ -96,8 +96,8 @@
                     </div>
                     <div class="text-center" id="id" style="border-top: solid 1px;">
                       <a href="#" class="btn "><img src="img/excluir.png" style="width: 25px; height: 25px"></a>
-                      <a href="atualizarReferencia.html" class="btn "><img src="img/editar.png" style="width: 25px; height: 25px"></a>
-                      <a href="livroDetalhado.html" class="btn "><img src="img/visualizar.png" style="width: 30px; height: 25px"></a>
+                      <a href="atualizarReferencia.jsp" class="btn "><img src="img/editar.png" style="width: 25px; height: 25px"></a>
+                      <a href="livroDetalhado.jsp" class="btn "><img src="img/visualizar.png" style="width: 30px; height: 25px"></a>
                   </div>
                 </div>
             </div>

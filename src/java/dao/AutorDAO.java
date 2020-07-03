@@ -80,7 +80,7 @@ public class AutorDAO {
             st.execute(sql);
             st.close();
         } catch (Exception e) {
-            throw new RuntimeException("Erro ao excluir produto " + e);
+            throw new RuntimeException("Erro ao excluir autor " + e);
         }
     }
 }
