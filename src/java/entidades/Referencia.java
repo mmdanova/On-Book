@@ -10,11 +10,15 @@ package entidades;
  * @author Joao Vitor
  */
 public class Referencia {
+
     private Integer idReferencia;
-    private String nome;
+    private Integer autorId;
+    private Integer bibliotecaId;
+    private Integer categoriaId;
     private String isbn;
     private String titulo;
     private String volume;
+    private String imagem;
     private Autor autor;
     private Categoria categoria;
     private Biblioteca biblioteca;
@@ -27,12 +31,28 @@ public class Referencia {
         this.idReferencia = idReferencia;
     }
 
-    public String getNome() {
-        return nome;
+    public Integer getAutorId() {
+        return autorId;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setAutorId(Integer autorId) {
+        this.autorId = autorId;
+    }
+
+    public Integer getBibliotecaId() {
+        return bibliotecaId;
+    }
+
+    public void setBibliotecaId(Integer bibliotecaId) {
+        this.bibliotecaId = bibliotecaId;
+    }
+
+    public Integer getCategoriaId() {
+        return categoriaId;
+    }
+
+    public void setCategoriaId(Integer categoriaId) {
+        this.categoriaId = categoriaId;
     }
 
     public String getIsbn() {
@@ -59,6 +79,14 @@ public class Referencia {
         this.volume = volume;
     }
 
+    public String getImagem() {
+        return imagem;
+    }
+
+    public void setImagem(String imagem) {
+        this.imagem = imagem;
+    }
+
     public Autor getAutor() {
         return autor;
     }
@@ -82,7 +110,5 @@ public class Referencia {
     public void setBiblioteca(Biblioteca biblioteca) {
         this.biblioteca = biblioteca;
     }
-    
-    
-    
+
 }

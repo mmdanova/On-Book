@@ -17,6 +17,7 @@ import java.util.ArrayList;
  * @author Joao Vitor
  */
 public class AutorDAO {
+
     private Connection conn;
     private PreparedStatement pstm;
     private Statement st;
@@ -32,8 +33,8 @@ public class AutorDAO {
         try {
             st = conn.createStatement();
             rs = st.executeQuery(sql);
-            
-            while(rs.next()) {
+
+            while (rs.next()) {
                 Autor autor = new Autor();
                 autor.setIdAutor(rs.getInt("idAutor"));
                 autor.setNome(rs.getString("nome"));
@@ -44,6 +45,23 @@ public class AutorDAO {
             throw new RuntimeException("Erro ao listar autor " + e);
         }
         return listaAutor;
+    }
+
+    public String consultarAutor(Integer idAutor) {
+        String sql = "SELECT * FROM AUTOR WHERE idAutor = " + idAutor;
+        String nomeAutor="";
+        try {
+            st = conn.createStatement();
+            rs = st.executeQuery(sql);
+            if (rs.next()) {
+                Autor autor = new Autor();
+                nomeAutor = rs.getString("nome");
+            }
+        } catch (Exception e) {
+            throw new RuntimeException("Erro ao consultar autor " + e);
+        }
+
+        return nomeAutor;
     }
 
     public void inserir(Autor autor) {

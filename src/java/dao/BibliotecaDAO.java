@@ -6,6 +6,7 @@
 package dao;
 
 import entidades.Biblioteca;
+import entidades.Categoria;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -17,6 +18,7 @@ import java.util.ArrayList;
  * @author Joao Vitor
  */
 public class BibliotecaDAO {
+
     private Connection conn;
     private PreparedStatement pstm;
     private Statement st;
@@ -32,8 +34,8 @@ public class BibliotecaDAO {
         try {
             st = conn.createStatement();
             rs = st.executeQuery(sql);
-            
-            while(rs.next()) {
+
+            while (rs.next()) {
                 Biblioteca biblioteca = new Biblioteca();
                 biblioteca.setIdBiblioteca(rs.getInt("idBiblioteca"));
                 biblioteca.setNome(rs.getString("nome"));
@@ -51,6 +53,23 @@ public class BibliotecaDAO {
             throw new RuntimeException("Erro ao listar biblioteca " + e);
         }
         return listaBiblioteca;
+    }
+
+    public String consultarBiblioteca(Integer idBiblioteca) {
+        String sql = "SELECT * FROM BIBLIOTECA WHERE idBiblioteca = " + idBiblioteca;
+        String nomeBiblioteca = "";
+        try {
+            st = conn.createStatement();
+            rs = st.executeQuery(sql);
+            if (rs.next()) {
+                nomeBiblioteca = rs.getString("nome");
+
+            }
+        } catch (Exception e) {
+            throw new RuntimeException("Erro ao consultar biblioteca " + e);
+        }
+
+        return nomeBiblioteca;
     }
 
     public void inserir(Biblioteca biblioteca) {

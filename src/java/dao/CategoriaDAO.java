@@ -46,6 +46,23 @@ public class CategoriaDAO {
         return listaCategoria;
     }
 
+        public String consultarCategoria(Integer idCategoria) {
+        String sql = "SELECT * FROM CATEGORIA WHERE idCategoria = " + idCategoria;
+        String nomeCategoria="";
+        try {
+            st = conn.createStatement();
+            rs = st.executeQuery(sql);
+            if (rs.next()) {
+                Categoria categoria = new Categoria();
+                nomeCategoria = rs.getString("nome");
+            }
+        } catch (Exception e) {
+            throw new RuntimeException("Erro ao consultar categoria " + e);
+        }
+
+        return nomeCategoria;
+    }
+    
     public void inserir(Categoria categoria) {
         String sql = "INSERT INTO CATEGORIA(nome) VALUES (?)";
         try {
