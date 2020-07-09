@@ -86,11 +86,8 @@
                                 <div class="text-center" id="id" style="border-top: solid 1px;">
                                     <%
                                         out.print("<a href='executa_excluirReferencia.jsp?idReferencia="+arrayReferencia.get(i).getIdReferencia()+"' class='btn'><img src='img/excluir.png' style='width: 25px; height: 25px'></a>");
-                                    %>
-                                    
-                                    <a href="livroDetalhado.jsp" class="btn "><img src="img/visualizar.png" style="width: 30px; height: 25px"></a>
-                                        <%
-                                            out.print("<a href='atualizarReferencia.jsp?idReferencia="+arrayReferencia.get(i).getIdReferencia()+"&titulo="+arrayReferencia.get(i).getTitulo()+"&isbn="+arrayReferencia.get(i).getIsbn()+"&volume="+arrayReferencia.get(i).getVolume()+"&idAutor="+arrayReferencia.get(i).getAutorId()+"&idBiblioteca="+arrayReferencia.get(i).getBibliotecaId()+"&idCategoria="+arrayReferencia.get(i).getCategoriaId()+"' class='btn '><img src='img/editar.png' style='width: 25px; height: 25px'></a>");
+                                        out.print("<a href='livroDetalhado.jsp?idReferencia="+arrayReferencia.get(i).getIdReferencia()+"&titulo="+arrayReferencia.get(i).getTitulo()+"&isbn="+arrayReferencia.get(i).getIsbn()+"&volume="+arrayReferencia.get(i).getVolume()+"&idAutor="+arrayReferencia.get(i).getAutorId()+"&idBiblioteca="+arrayReferencia.get(i).getBibliotecaId()+"&idCategoria="+arrayReferencia.get(i).getCategoriaId()+"' class='btn'><img src='img/visualizar.png' style='width: 30px; height: 25px'></a>");
+                                        out.print("<a href='atualizarReferencia.jsp?idReferencia="+arrayReferencia.get(i).getIdReferencia()+"&titulo="+arrayReferencia.get(i).getTitulo()+"&isbn="+arrayReferencia.get(i).getIsbn()+"&volume="+arrayReferencia.get(i).getVolume()+"&idAutor="+arrayReferencia.get(i).getAutorId()+"&idBiblioteca="+arrayReferencia.get(i).getBibliotecaId()+"&idCategoria="+arrayReferencia.get(i).getCategoriaId()+"' class='btn '><img src='img/editar.png' style='width: 25px; height: 25px'></a>");
                                         %>
                                 </div>
                             </div>

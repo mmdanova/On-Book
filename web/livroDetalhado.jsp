@@ -1,3 +1,13 @@
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.Arrays"%>
+<%@page import="dao.AutorDAO"%>
+<%@page import="entidades.Autor"%>
+<%@page import="dao.CategoriaDAO"%>
+<%@page import="entidades.Categoria"%>
+<%@page import="dao.BibliotecaDAO"%>
+<%@page import="entidades.Biblioteca"%>
+<%@page import="dao.ReferenciaDAO"%>
+<%@page import="entidades.Referencia"%>
 <!DOCTYPE html>
 <html>
 <title>OnBook Detalhe</title>
@@ -45,21 +55,48 @@
           <a href="index.html"><img src="img/voltar.png" style="width: 30px; height: 30px; margin-right: 20px;"></a>
         </nav>
 
+          <%
+                                    String idReferencia = "";
+                                    String titulo = "";
+                                    String isbn = "";
+                                    String volume = "";
+                                    String idAutor = "";
+                                    String idBiblioteca = "";
+                                    String idCategoria = "";
+                                    try {
+                                        idReferencia = request.getParameter("idReferencia");
+                                        titulo = request.getParameter("titulo");
+                                        isbn = request.getParameter("isbn");
+                                        volume = request.getParameter("volume");
+                                        idAutor = request.getParameter("idAutor");
+                                        idBiblioteca = request.getParameter("idBiblioteca");
+                                        idCategoria = request.getParameter("idCategoria");
+                                    } catch (NumberFormatException e) {
+                                        throw new RuntimeException("Erro ao pegar parametros" + e);
+                                    }
+  
+                                                  
+                                  ReferenciaDAO referenciaDAO = new ReferenciaDAO();
+                                  AutorDAO autorDAO = new AutorDAO();
+                                  CategoriaDAO categoriaDAO = new CategoriaDAO();
+                                  BibliotecaDAO bibliotecaDAO = new BibliotecaDAO();
+                                %>
+          
         <div class="container-fluid bg-light">
           <div class="row" id="ContainerForm">
             <div class="col">
-              <img src="img/teste.jpg">
+              <!--<img src="img/teste.jpg">-->
             </div>
             <div class="col-8">
 
               <div class="card">
                 <div class="card-body">
-                  <h5 class="card-title" id="idNomeReferencia">A Hora da Estrela</h5>
+                  <h5 class="card-title" id="idNomeReferencia"><%=titulo%></h5>
                   <div>
-                    <label id="idNomeAutorReferencia">Autor</label><br>
-                    <label id="idCategoriaReferencia">Categoria</label><br>
-                    <label id="idIsbnReferencia">ISBN</label><br>
-                    <label id="idNomeBibliotecaREferencia">Biblioteca</label>
+                    <label id="idNomeAutorReferencia">Autor: <%=autorDAO.consultarAutor(Integer.parseInt(idAutor))%></label><br>
+                    <label id="idCategoriaReferencia">Categoria: <%=categoriaDAO.consultarCategoria(Integer.parseInt(idCategoria))%></label><br>
+                    <label id="idIsbnReferencia">ISBN: <%=isbn%></label><br>
+                    <label id="idNomeBibliotecaREferencia"><%=bibliotecaDAO.consultarBiblioteca(Integer.parseInt(idBiblioteca))%></label>
                   </div>
                 </div>
               </div>
