@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 29-Jun-2020 às 00:30
+-- Tempo de geração: 09-Jul-2020 às 03:58
 -- Versão do servidor: 10.4.6-MariaDB
 -- versão do PHP: 7.3.9
 
@@ -31,7 +31,11 @@ SET time_zone = "+00:00";
 CREATE TABLE `autor` (
   `idAutor` int(6) NOT NULL,
   `nome` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `autor`
+--
 
 -- --------------------------------------------------------
 
@@ -42,10 +46,18 @@ CREATE TABLE `autor` (
 CREATE TABLE `biblioteca` (
   `idBiblioteca` int(6) NOT NULL,
   `nome` varchar(100) NOT NULL,
-  `endereco` text NOT NULL,
+  `rua` mediumtext NOT NULL,
+  `numEnd` varchar(10) NOT NULL,
+  `bairro` varchar(50) NOT NULL,
+  `cidade` varchar(50) NOT NULL,
+  `estado` varchar(20) NOT NULL,
   `telefone` varchar(20) NOT NULL,
   `email` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `biblioteca`
+--
 
 -- --------------------------------------------------------
 
@@ -56,7 +68,11 @@ CREATE TABLE `biblioteca` (
 CREATE TABLE `categoria` (
   `idCategoria` int(6) NOT NULL,
   `nome` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `categoria`
+--
 
 -- --------------------------------------------------------
 
@@ -73,7 +89,7 @@ CREATE TABLE `emprestimo` (
   `idUsuarioSolicitante` int(6) NOT NULL,
   `idReferencia` int(6) NOT NULL,
   `idSituacao` int(6) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -84,7 +100,7 @@ CREATE TABLE `emprestimo` (
 CREATE TABLE `emprestimo_situacao` (
   `idSituacao` int(6) NOT NULL,
   `nome` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -99,8 +115,10 @@ CREATE TABLE `referencia` (
   `volume` varchar(10) NOT NULL,
   `idAutor` int(6) NOT NULL,
   `idCategoria` int(6) NOT NULL,
-  `idBiblioteca` int(6) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `idBiblioteca` int(6) NOT NULL,
+  `imagem` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 
 -- --------------------------------------------------------
 
@@ -115,8 +133,8 @@ CREATE TABLE `usuario` (
   `senha` varchar(50) NOT NULL,
   `telefone` varchar(20) NOT NULL,
   `cpf` varchar(11) NOT NULL,
-  `endereco` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `endereco` mediumtext NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Índices para tabelas despejadas
@@ -178,19 +196,19 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de tabela `autor`
 --
 ALTER TABLE `autor`
-  MODIFY `idAutor` int(6) NOT NULL AUTO_INCREMENT;
+  MODIFY `idAutor` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de tabela `biblioteca`
 --
 ALTER TABLE `biblioteca`
-  MODIFY `idBiblioteca` int(6) NOT NULL AUTO_INCREMENT;
+  MODIFY `idBiblioteca` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de tabela `categoria`
 --
 ALTER TABLE `categoria`
-  MODIFY `idCategoria` int(6) NOT NULL AUTO_INCREMENT;
+  MODIFY `idCategoria` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de tabela `emprestimo`
@@ -208,7 +226,7 @@ ALTER TABLE `emprestimo_situacao`
 -- AUTO_INCREMENT de tabela `referencia`
 --
 ALTER TABLE `referencia`
-  MODIFY `idReferencia` int(6) NOT NULL AUTO_INCREMENT;
+  MODIFY `idReferencia` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de tabela `usuario`
