@@ -52,7 +52,7 @@
 
         <nav class="navbar bg-dark">
           <h4 style="color: white">Referência Detalhada</h4>
-          <a href="index.html"><img src="img/voltar.png" style="width: 30px; height: 30px; margin-right: 20px;"></a>
+          <a href="index.jsp"><img src="img/voltar.png" style="width: 30px; height: 30px; margin-right: 20px;"></a>
         </nav>
 
           <%
