@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 09-Jul-2020 às 03:58
+-- Tempo de geração: 10-Jul-2020 às 07:04
 -- Versão do servidor: 10.4.6-MariaDB
 -- versão do PHP: 7.3.9
 
@@ -36,6 +36,7 @@ CREATE TABLE `autor` (
 --
 -- Extraindo dados da tabela `autor`
 --
+
 
 -- --------------------------------------------------------
 
@@ -74,6 +75,7 @@ CREATE TABLE `categoria` (
 -- Extraindo dados da tabela `categoria`
 --
 
+
 -- --------------------------------------------------------
 
 --
@@ -82,16 +84,19 @@ CREATE TABLE `categoria` (
 
 CREATE TABLE `emprestimo` (
   `idEmprestimo` int(11) NOT NULL,
-  `valor` double NOT NULL,
+  `dataRetirada` date DEFAULT NULL,
   `dataInicioEmprestimo` date NOT NULL,
   `dataFimEmprestimo` date NOT NULL,
-  `dataEntrega` date NOT NULL,
-  `idUsuarioSolicitante` int(6) NOT NULL,
+  `dataEntrega` date DEFAULT NULL,
+  `idUsuarioSolicitante` int(6) DEFAULT NULL,
   `idReferencia` int(6) NOT NULL,
   `idSituacao` int(6) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- --------------------------------------------------------
+--
+-- Extraindo dados da tabela `emprestimo`
+--
+-----------------------------------------------------
 
 --
 -- Estrutura da tabela `emprestimo_situacao`
@@ -101,6 +106,16 @@ CREATE TABLE `emprestimo_situacao` (
   `idSituacao` int(6) NOT NULL,
   `nome` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `emprestimo_situacao`
+--
+
+INSERT INTO `emprestimo_situacao` (`idSituacao`, `nome`) VALUES
+(1, 'Em atraso'),
+(2, 'Pendente'),
+(3, 'Finalizado'),
+(4, 'Aguardando retirada');
 
 -- --------------------------------------------------------
 
@@ -119,6 +134,9 @@ CREATE TABLE `referencia` (
   `imagem` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Extraindo dados da tabela `referencia`
+--
 
 -- --------------------------------------------------------
 
@@ -214,13 +232,13 @@ ALTER TABLE `categoria`
 -- AUTO_INCREMENT de tabela `emprestimo`
 --
 ALTER TABLE `emprestimo`
-  MODIFY `idEmprestimo` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idEmprestimo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de tabela `emprestimo_situacao`
 --
 ALTER TABLE `emprestimo_situacao`
-  MODIFY `idSituacao` int(6) NOT NULL AUTO_INCREMENT;
+  MODIFY `idSituacao` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de tabela `referencia`
