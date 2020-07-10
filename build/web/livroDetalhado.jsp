@@ -102,7 +102,10 @@
               </div>
 
               <div class="form-group float-right">
-                <button type="submit" id="btnEmprestimo" class="btn btn-success" style="margin: 10px">Reservar</button>
+                  <%
+                    out.print("<a href='executa_inserirEmprestimo.jsp?idReferencia="+idReferencia+"' btnEmprestimo' class='btn btn-success' style='margin: 10px; color: white;'>Reservar</a>");
+                  %>
+                
               </div>
 
             </div>
