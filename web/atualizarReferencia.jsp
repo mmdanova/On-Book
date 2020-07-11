@@ -151,7 +151,7 @@
                                 </div>
 
                                 <div class="form-group float-right">
-                                    <button type="submit" id="btnCancelar" class="btn btn-danger" style="margin: 10px">Cancelar</button>
+                                    <a onclick="history.go(-1);" id="btnCancelar" class="btn btn-danger" style="color:white;">Cancelar</a>
                                     <button type="submit" id="btnAtualizarLivro" class="btn btn-success" style="margin: 10px">Salvar</button>
                                 </div>
                             </form>

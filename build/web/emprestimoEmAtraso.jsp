@@ -23,7 +23,16 @@
     <link rel="stylesheet" href="./css/bootstrap.css/bootstrap.min.css">
     <script type="text/javascript" src="./js/bootstrap.js/jquery-3.5.1.min.js"></script>
     <link rel="stylesheet" href="./css/index.css">
-
+    <script type="text/javascript">
+        function mudarFiltro() {
+            var items = document.getElementById('caminhos');
+            items.addEventListener('change', function () {
+                document.getElementById('formAlterarSituacao').action = "alterarFiltroEmprestimo.jsp?"+this.value+"";
+                alert(document.getElementById('formAlterarSituacao').action = "alterarFiltroEmprestimo.jsp?"+this.value+"");
+                document.getElementById('formAlterarSituacao').submit();
+            });
+        }
+    </script>
     <body class="bg-light">
 
         <div class="d-flex" id="wrapper">
@@ -63,8 +72,8 @@
                         <div class="row" >
                             <div class="col" style="height: 30px;">
                                 <select name="filtroEmprestimo" class="form-control" id="txtFiltro" value="filtro">
-                                    <option value="1">Em Atraso</option>
-                                    <option value="2" selected="selected">Pendente</option>
+                                    <option value="1" selected="selected">Em Atraso</option>
+                                    <option value="2" >Pendente</option>
                                     <option value="3">Finalizados</option>
                                 </select>
                             </div>
@@ -86,7 +95,7 @@
                                                           BibliotecaDAO bibliotecaDAO = new BibliotecaDAO();
                                                           EmprestimoDAO emprestimoDAO = new EmprestimoDAO();
 
-                                                          ArrayList<Emprestimo> arrayEmprestimo = emprestimoDAO.listarTodosEmprestimosPendentes();
+                                                          ArrayList<Emprestimo> arrayEmprestimo = emprestimoDAO.listarTodosEmprestimosEmAtraso();
                                                          
                                                           for (int i = 0; i < arrayEmprestimo.size(); i++) {
                                                               

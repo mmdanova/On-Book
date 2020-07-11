@@ -24,7 +24,6 @@
     <script type="text/javascript" src="./js/bootstrap.js/jquery-3.5.1.min.js"></script>
     <link rel="stylesheet" href="./css/index.css">
 
-
     <body class="bg-light">
 
         <div class="d-flex" id="wrapper">
@@ -60,16 +59,20 @@
 
                 <nav class="navbar bg-dark">
                     <h4 style="color: white">Meus Empréstimos</h4>
-                    <div class="row" >
-                        <div class="col" style="height: 30px;">
-                            <select name="filtroEmprestimo" class="form-control" id="txtFiltro" value="filtro">
-                                <option value="txtAtraso">Em Atraso</option>
-                                <option value="txtPendente">Pendente</option>
-                                <option value="txtFinalizados">Finalizados</option>
-                            </select>
+                    <form id="formAlterarSituacao" method="POST" action="alterarFiltroEmprestimo.jsp">
+                        <div class="row" >
+                            <div class="col" style="height: 30px;">
+                                <select name="filtroEmprestimo" class="form-control" id="txtFiltro" value="filtro">
+                                    <option value="1">Em Atraso</option>
+                                    <option value="2" selected="selected">Pendente</option>
+                                    <option value="3">Finalizados</option>
+                                </select>
+                            </div>
+                            <input type="image" src="img/pesquisar.png" style="width: 30px; height: 30px; margin-right: 20px;">
+
+
                         </div>
-                        <a href="#" id="filtrar"><img src="img/pesquisar.png" style="width: 30px; height: 30px; margin-right: 20px;"></a>
-                    </div>
+                    </form>
                 </nav>
 
                 <div class="container-fluid bg-light" id="ContainerList">
@@ -83,13 +86,13 @@
                                                           BibliotecaDAO bibliotecaDAO = new BibliotecaDAO();
                                                           EmprestimoDAO emprestimoDAO = new EmprestimoDAO();
 
-                                                          ArrayList<Emprestimo> arrayEmprestimo = emprestimoDAO.listarTodosEmprestimos();
+                                                          ArrayList<Emprestimo> arrayEmprestimo = emprestimoDAO.listarTodosEmprestimosPendentes();
                                                          
                                                           for (int i = 0; i < arrayEmprestimo.size(); i++) {
                                                               
                         %>
                         <div class="card mb-6" style="width: 17rem; margin: 25px">
-                            
+
                             <div class="card-body">
                                 <h5 class="card-title"><%=emprestimoDAO.retornarTituloPorIdRef(emprestimoDAO.retornaIdReferenciaPorIdEmprestimo(arrayEmprestimo.get(i).getIdEmprestimo()))%></h5>
                                 <div>
