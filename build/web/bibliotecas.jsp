@@ -62,7 +62,7 @@
                                                               out.print("<div class='card-body'>");
                                                               out.print("<h5 class='card-title'> "+arrayBiblioteca.get(i).getNome()+"</h5>");
                                                               out.print("<div>");
-                                                              out.print("<p>"+arrayBiblioteca.get(i).getRua()+", "+arrayBiblioteca.get(i).getNumEnd()+" - "+arrayBiblioteca.get(i).getBairro()+", "+arrayBiblioteca.get(i).getCidade()+" - "+arrayBiblioteca.get(i).getEstado()+"</p>");
+                                                              out.print("<p>Endereço: "+arrayBiblioteca.get(i).getRua()+", "+arrayBiblioteca.get(i).getNumEnd()+" - "+arrayBiblioteca.get(i).getBairro()+", "+arrayBiblioteca.get(i).getCidade()+" - "+arrayBiblioteca.get(i).getEstado()+"</p>");
                                                               out.print("<label>Contato: "+arrayBiblioteca.get(i).getTelefone()+"</label><br>");
                                                               out.print("<label>E-mail: "+arrayBiblioteca.get(i).getEmail()+"</label>");
                                                               out.print("</div>");

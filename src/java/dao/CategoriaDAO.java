@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package dao;
 
 import entidades.Categoria;
@@ -12,10 +7,6 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-/**
- *
- * @author Joao Vitor
- */
 public class CategoriaDAO {
     private Connection conn;
     private PreparedStatement pstm;
@@ -53,7 +44,6 @@ public class CategoriaDAO {
             st = conn.createStatement();
             rs = st.executeQuery(sql);
             if (rs.next()) {
-                Categoria categoria = new Categoria();
                 nomeCategoria = rs.getString("nome");
             }
         } catch (Exception e) {

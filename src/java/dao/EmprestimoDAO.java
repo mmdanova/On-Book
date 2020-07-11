@@ -58,7 +58,6 @@ public class EmprestimoDAO {
             st = conn.createStatement();
             rs = st.executeQuery(sql);
             if (rs.next()) {
-                Referencia referencia = new Referencia();
                 tituloRef = rs.getString("titulo");
             }
         } catch (Exception e) {
@@ -92,7 +91,6 @@ public class EmprestimoDAO {
             st = conn.createStatement();
             rs = st.executeQuery(sql);
             if (rs.next()) {
-                Referencia referencia = new Referencia();
                 idAutor = rs.getInt("idAutor");
             }
         } catch (Exception e) {
@@ -109,7 +107,6 @@ public class EmprestimoDAO {
             st = conn.createStatement();
             rs = st.executeQuery(sql);
             if (rs.next()) {
-                Autor autor = new Autor();
                 nomeAutor = rs.getString("nome");
             }
         } catch (Exception e) {
@@ -126,7 +123,6 @@ public class EmprestimoDAO {
             st = conn.createStatement();
             rs = st.executeQuery(sql);
             if (rs.next()) {
-
                 idCategoria = rs.getInt("idCategoria");
             }
         } catch (Exception e) {
@@ -159,7 +155,6 @@ public class EmprestimoDAO {
             st = conn.createStatement();
             rs = st.executeQuery(sql);
             if (rs.next()) {
-
                 idReferencia = rs.getString("titulo");
             }
         } catch (Exception e) {
@@ -276,19 +271,10 @@ public class EmprestimoDAO {
         return listaEmprestimo;
     }
 
-    public Date teste(Emprestimo e) {
-
-//        return dateFormat.format(e.getDataEntrega());
-        return (Date) e.getDataEntrega();
-    }
-
     public void inserir(Emprestimo emp) {
         String sql = "INSERT INTO emprestimo (dataInicioEmprestimo,dataFimEmprestimo,idReferencia,idSituacao) VALUES (?,?,?,?)";
-//        String sql2 = "INSERT INTO emprestimo (dataInicioEmprestimo,dataFimEmprestimo,idReferencia,idSituacao) VALUES ('"+dateFormat.format(emp.getDataEntrega())+"','"+dateFormat.format(emp.getDataInicioEmprestimo())+"','"+dateFormat.format(emp.getDataFimEmprestimo())+"',"+emp.getReferenciaId()+","+emp.getSituacaoEmprestimo()+")";
         try {
             pstm = conn.prepareStatement(sql);
-//            pstm = conn.prepareStatement(sql2);
-////            
             pstm.setString(1, dateFormat.format(emp.getDataInicioEmprestimo()));
             pstm.setString(2, dateFormat.format(emp.getDataFimEmprestimo()));
             pstm.setInt(3, emp.getReferenciaId());

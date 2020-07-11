@@ -54,7 +54,6 @@ public class ReferenciaDAO {
             st = conn.createStatement();
             rs = st.executeQuery(sql);
             if (rs.next()) {
-                Autor autor = new Autor();
                 nomeAutor = rs.getString("nome");
             }
         } catch (Exception e) {

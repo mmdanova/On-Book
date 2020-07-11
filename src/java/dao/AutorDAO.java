@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package dao;
 
 import entidades.Autor;
@@ -12,10 +7,6 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-/**
- *
- * @author Joao Vitor
- */
 public class AutorDAO {
 
     private Connection conn;
@@ -54,7 +45,6 @@ public class AutorDAO {
             st = conn.createStatement();
             rs = st.executeQuery(sql);
             if (rs.next()) {
-                Autor autor = new Autor();
                 nomeAutor = rs.getString("nome");
             }
         } catch (Exception e) {
