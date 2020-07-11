@@ -36,8 +36,7 @@
                     emprestimo.setIdReferencia(Integer.parseInt(idEmprestimo));
                     emprestimo.setSituacaoEmprestimo(3);
                         
-                    //emprestimoDAO.alterarSituacaoEmprestimo(Integer.parseInt(idEmprestimo), idSituacaoFinalizado);
-                    emprestimoDAO.alterarSituacaoEmprestimo(emprestimo);
+                    emprestimoDAO.alterarSituacaoEmprestimo(Integer.parseInt(idEmprestimo), idSituacaoFinalizado);
                     response.sendRedirect("emprestimo.jsp");
                 }
             } catch (Exception e) {
