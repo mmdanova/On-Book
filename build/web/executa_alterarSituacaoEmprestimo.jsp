@@ -29,14 +29,15 @@
                 Emprestimo emprestimo = new Emprestimo();
                 EmprestimoDAO emprestimoDAO = new EmprestimoDAO();
                 String idEmprestimo = request.getParameter("idEmprestimo");
+                String idSituacao = request.getParameter("idSituacao");
                 Integer idSituacaoFinalizado = 3;
                 if (request.getParameter("idEmprestimo").equals("")) {
                     response.sendRedirect("emprestimo.jsp");
                 } else {
                     emprestimo.setIdReferencia(Integer.parseInt(idEmprestimo));
-                    emprestimo.setSituacaoEmprestimo(3);
+                    //emprestimo.setSituacaoEmprestimo(3);
                         
-                    emprestimoDAO.alterarSituacaoEmprestimo(Integer.parseInt(idEmprestimo), idSituacaoFinalizado);
+                    emprestimoDAO.alterarSituacaoEmprestimo(Integer.parseInt(idEmprestimo), Integer.parseInt(idSituacao));
                     response.sendRedirect("emprestimo.jsp");
                 }
             } catch (Exception e) {

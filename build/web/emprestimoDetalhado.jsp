@@ -141,7 +141,12 @@
                                 <div class="form-group float-right">
                                     <%
                                         if(Integer.parseInt(idSituacaoEmprestimo) != 3) {
-                                            out.print("<a href='executa_alterarSituacaoEmprestimo.jsp?idEmprestimo="+idEmprestimo+"' id='btnEmprestimo' class='btn btn-primary' style='margin: 20px; color: white; '>Finalizar Empréstimo</a>");
+                                            out.print("<a href='executa_alterarSituacaoEmprestimo.jsp?idEmprestimo="+idEmprestimo+"&idSituacao="+3+"' id='btnEmprestimo' class='btn btn-primary' style='margin: 20px; color: white; '>Finalizar Empréstimo</a>");
+                                            if(Integer.parseInt(idSituacaoEmprestimo) == 4) {
+                                                out.print("<a href='executa_alterarSituacaoEmprestimo.jsp?idEmprestimo="+idEmprestimo+"&idSituacao="+2+"' id='btnEmprestimo' class='btn btn-success' style='margin: 20px; color: white; '>Confirmar Empréstimo</a>");
+                                            } else {
+                                                
+                                            }
                                         } else {
                                             out.print("<a href='#' id='btnEmprestimo' class='btn btn-primary' style='margin: 20px; color: white; pointer-events: none; cursor: default; opacity: 0.6; '>Empréstimo Finalizado</a>");
                                         }
