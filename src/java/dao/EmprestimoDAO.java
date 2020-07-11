@@ -227,7 +227,7 @@ public class EmprestimoDAO {
     }
 
     public ArrayList<Emprestimo> listarTodosEmprestimosPendentes() {
-        String sql = "SELECT * FROM EMPRESTIMO emp INNER JOIN EMPRESTIMO_SITUACAO emps on emps.idSituacao = emp.idSituacao INNER JOIN REFERENCIA ref on ref.idReferencia = emp.idReferencia WHERE emp.idSituacao =2";
+        String sql = "SELECT * FROM EMPRESTIMO emp INNER JOIN EMPRESTIMO_SITUACAO emps on emps.idSituacao = emp.idSituacao INNER JOIN REFERENCIA ref on ref.idReferencia = emp.idReferencia WHERE emp.idSituacao in(2,4)";
         try {
             st = conn.createStatement();
             rs = st.executeQuery(sql);
