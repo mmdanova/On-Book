@@ -22,6 +22,9 @@ SET time_zone = "+00:00";
 -- Banco de dados: `onbook`
 --
 
+CREATE DATABASE ONBOOK;
+USE ONBOOK;
+
 -- --------------------------------------------------------
 
 --
