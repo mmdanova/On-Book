@@ -46,6 +46,7 @@
                     emprestimo.setSituacaoEmprestimo(4);
                     emprestimo.setDataInicioEmprestimo(dataInicioEmprestimo);
                     emprestimo.setDataFimEmprestimo(dataFimEmprestimo);
+                    //emprestimo.setDataRetirada(dataRetirada);
                     
                     emprestimoDAO.inserir(emprestimo);
                     response.sendRedirect("index.jsp");

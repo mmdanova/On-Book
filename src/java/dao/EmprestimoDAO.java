@@ -1,8 +1,10 @@
 package dao;
 
 import entidades.Autor;
+import entidades.Categoria;
 import entidades.Referencia;
 import entidades.Emprestimo;
+import entidades.Biblioteca;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -124,7 +126,7 @@ public class EmprestimoDAO {
             st = conn.createStatement();
             rs = st.executeQuery(sql);
             if (rs.next()) {
-                
+
                 idCategoria = rs.getInt("idCategoria");
             }
         } catch (Exception e) {
@@ -133,7 +135,7 @@ public class EmprestimoDAO {
 
         return idCategoria;
     }
-    
+
     public String retornarNomeCategoriaPorIdCategoria(Integer idCateg) {
         String sql = "SELECT * FROM Categoria WHERE idCategoria = " + idCateg;
         String nomeCategoria = "";
@@ -166,7 +168,7 @@ public class EmprestimoDAO {
 
         return idReferencia;
     }
-    
+
     public Integer retornaIdBibliotecaPorIdReferencia(Integer idRef) {
         String sql = "SELECT * FROM REFERENCIA WHERE idReferencia = " + idRef;
         Integer idBiblioteca = 0;
@@ -182,7 +184,7 @@ public class EmprestimoDAO {
 
         return idBiblioteca;
     }
-    
+
     public String retornarNomeBibliotecaPorIdBiblioteca(Integer idBibli) {
         String sql = "SELECT * FROM BIBLIOTECA WHERE idBiblioteca = " + idBibli;
         String nomeBiblioteca = "";
@@ -273,10 +275,9 @@ public class EmprestimoDAO {
         }
         return listaEmprestimo;
     }
-    
+
     public Date teste(Emprestimo e) {
-        
-        
+
 //        return dateFormat.format(e.getDataEntrega());
         return (Date) e.getDataEntrega();
     }
@@ -296,10 +297,10 @@ public class EmprestimoDAO {
             pstm.close();
 
         } catch (Exception e) {
-            throw new RuntimeException("Erro ao inserir emprestimo dao " +e);
-            
+            throw new RuntimeException("Erro ao inserir emprestimo dao " + e);
+
         }
-        
+
     }
 
     public void alterar(Emprestimo emp, Integer idReferencia) {
@@ -314,7 +315,6 @@ public class EmprestimoDAO {
             pstm.setInt(6, emp.getIdEmprestimo());
             pstm.execute();
             pstm.close();
-            
 
         } catch (Exception e) {
             throw new RuntimeException("Erro ao alterar emprestimo sql " + e);
@@ -331,4 +331,116 @@ public class EmprestimoDAO {
             throw new RuntimeException("Erro ao excluir emprestimo " + e);
         }
     }
+
+    public Biblioteca retornaBibliotecaPeloId(Integer idBib) {
+        String sql = "SELECT * FROM BIBLIOTECA WHERE idBiblioteca= " + idBib;
+        Biblioteca biblioteca = new Biblioteca();
+        try {
+            st = conn.createStatement();
+            rs = st.executeQuery(sql);
+            if (rs.next()) {
+                biblioteca.setIdBiblioteca(idBib);
+                biblioteca.setNome(rs.getString("nome"));
+                biblioteca.setEmail(rs.getString("email"));
+                biblioteca.setTelefone(rs.getString("telefone"));
+                biblioteca.setEstado(rs.getString("estado"));
+                biblioteca.setCidade(rs.getString("cidade"));
+                biblioteca.setBairro(rs.getString("bairro"));
+                biblioteca.setRua(rs.getString("rua"));
+                biblioteca.setNumEnd(rs.getString("numEnd"));
+
+            }
+        } catch (Exception e) {
+            throw new RuntimeException("Erro ao retornar biblioteca por id biblioteca" + e);
+        }
+        return biblioteca;
+    }
+
+    public Emprestimo retornaEmprestimoPeloId(Integer idEmp) {
+        String sql = "SELECT * FROM EMPRESTIMO WHERE idEmprestimo = " + idEmp;
+        Emprestimo emprestimo = new Emprestimo();
+        try {
+            st = conn.createStatement();
+            rs = st.executeQuery(sql);
+            if (rs.next()) {
+                emprestimo.setIdEmprestimo(idEmp);
+                emprestimo.setDataInicioEmprestimo(rs.getDate("dataInicioEmprestimo"));
+                emprestimo.setDataFimEmprestimo(rs.getDate("dataFimEmprestimo"));
+                emprestimo.setDataEntrega(rs.getDate("dataFimEmprestimo"));
+                //emprestimo.setDataRetirada(rs.getDate("dataRetirada"));
+                emprestimo.setReferenciaId(rs.getInt("idReferencia"));
+
+            }
+        } catch (Exception e) {
+            throw new RuntimeException("Erro ao retornar emprestimo por id emprestimo " + e);
+        }
+        return emprestimo;
+    }
+
+    public Autor retornaAutorPeloId(Integer idAutor) {
+        String sql = "SELECT * FROM AUTOR WHERE idAutor = " + idAutor;
+        Autor autor = new Autor();
+        try {
+            st = conn.createStatement();
+            rs = st.executeQuery(sql);
+            if (rs.next()) {
+                autor.setIdAutor(idAutor);
+                autor.setNome(rs.getString("nome"));
+
+            }
+        } catch (Exception e) {
+            throw new RuntimeException("Erro ao retornar autor por id autor " + e);
+        }
+        return autor;
+    }
+
+    public Categoria retornaCategoriaPeloId(Integer idCategoria) {
+        String sql = "SELECT * FROM CATEGORIA WHERE idCategoria = " + idCategoria;
+        Categoria categoria = new Categoria();
+        try {
+            st = conn.createStatement();
+            rs = st.executeQuery(sql);
+            if (rs.next()) {
+                categoria.setIdCategoria(idCategoria);
+                categoria.setNome(rs.getString("nome"));
+
+            }
+        } catch (Exception e) {
+            throw new RuntimeException("Erro ao retornar categoria por id categoria " + e);
+        }
+        return categoria;
+    }
+
+    public Referencia retornaReferenciaPeloId(Integer idRef) {
+        String sql = "SELECT * FROM REFERENCIA WHERE idReferencia = " + idRef;
+        Referencia referencia = new Referencia();
+        try {
+            st = conn.createStatement();
+            rs = st.executeQuery(sql);
+            if (rs.next()) {
+                referencia.setIdReferencia(idRef);
+                referencia.setTitulo(rs.getString("titulo"));
+                referencia.setIsbn(rs.getString("isbn"));
+                referencia.setVolume(rs.getString("volume"));
+            }
+        } catch (Exception e) {
+            throw new RuntimeException("Erro ao retornar referencia por id referencia " + e);
+        }
+        return referencia;
+    }
+
+    public void alterarSituacaoEmprestimo(Integer idEmprestimo, Integer idSituacao) {
+        String sql = "UPDATE EMPRESTIMO SET idSituacao = ? WHERE idEmprestimo = ?";
+        try {
+            pstm = conn.prepareStatement(sql);
+            pstm.setInt(1, idSituacao);
+            pstm.setInt(2, idEmprestimo);
+            pstm.execute();
+            pstm.close();
+
+        } catch (Exception e) {
+            throw new RuntimeException("Erro ao alterar situação emprestimo para finalizado dao " + e);
+        }
+    }
+
 }

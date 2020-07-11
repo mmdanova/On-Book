@@ -9,6 +9,7 @@ public class Emprestimo {
     private Date dataEntrega;
     private Date dataInicioEmprestimo;
     private Date dataFimEmprestimo;
+    private Date dataRetirada;
     private Double valorEmprestimo;
     private Integer situacaoEmprestimo;
     private String situacaoDescricao;
@@ -52,6 +53,14 @@ public class Emprestimo {
         this.dataFimEmprestimo = dataFimEmprestimo;
     }
 
+    public Date getDataRetirada() {
+        return dataRetirada;
+    }
+
+    public void setDataRetirada(Date dataRetirada) {
+        this.dataRetirada = dataRetirada;
+    }
+    
     public Double getValorEmprestimo() {
         return valorEmprestimo;
     }

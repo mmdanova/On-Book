@@ -1,5 +1,9 @@
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.Arrays"%>
+<%@page import="java.util.Date"%>
+<%@page import="java.time.LocalDate"%>
+<%@page import="java.time.format.DateTimeFormatter"%>
+<%@page import="java.text.SimpleDateFormat"%>
 <%@page import="dao.AutorDAO"%>
 <%@page import="entidades.Autor"%>
 <%@page import="dao.CategoriaDAO"%>
@@ -10,10 +14,11 @@
 <%@page import="entidades.Referencia"%>
 <%@page import="dao.EmprestimoDAO"%>
 <%@page import="entidades.Emprestimo"%>
+<%@ page contentType="text/html; charset=UTF-8" %>
 <!DOCTYPE html>
 <html>
     <title>OnBook Inicial</title>
-    <meta charset="UTF-8">
+    <!--<meta charset="UTF-8">-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./css/bootstrap.css/bootstrap.min.css">
     <script type="text/javascript" src="./js/bootstrap.js/jquery-3.5.1.min.js"></script>
@@ -41,7 +46,7 @@
                         <img src="img/biblioteca.png" style="width: 30px; height: 30px"><b> Bibliotecas</b>
                     </a>
                     <a href="emprestimo.jsp" class="border-white list-group-item list-group-item-action bg-light">
-                        <img src="img/emprestimo.png" style="width: 30px; height: 32px"><b> Empréstimos</b>
+                        <img src="img/emprestimo.png" style="width: 30px; height: 32px"><b> EmprÃ©stimos</b>
                     </a>
                     <a href="perfil.jsp" class="border-white list-group-item list-group-item-action">
                         <img src="img/perfil.png" style="width: 30px; height: 30px"><b> Meu Perfil</b>
@@ -54,7 +59,7 @@
             <div id="page-content-wrapper">
 
                 <nav class="navbar bg-dark">
-                    <h4 style="color: white">Meus Empréstimos</h4>
+                    <h4 style="color: white">Meus EmprÃ©stimos</h4>
                     <div class="row" >
                         <div class="col" style="height: 30px;">
                             <select name="filtroEmprestimo" class="form-control" id="txtFiltro" value="filtro">
@@ -72,7 +77,6 @@
                         <%
               
                         try {
-                                                  
                                                           ReferenciaDAO referenciaDAO = new ReferenciaDAO();
                                                           AutorDAO autorDAO = new AutorDAO();
                                                           CategoriaDAO categoriaDAO = new CategoriaDAO();
@@ -95,7 +99,9 @@
                                     <label id="idStatusEmprestimo">Status: <%=arrayEmprestimo.get(i).getSituacaoDescricao()%></label>
                                 </div>
                                 <div class="text-center" style="border-top: solid 1px;">
-                                    <a href="emprestimoDetalhado.jsp" class="btn "><img src="img/visualizar.png" style="width: 30px; height: 25px"></a>
+                                    <%
+                                        out.print("<a href='emprestimoDetalhado.jsp?idEmprestimo="+arrayEmprestimo.get(i).getIdEmprestimo()+"&idAutor="+emprestimoDAO.retornaIdAutorPorIdReferencia(emprestimoDAO.retornaIdReferenciaPorIdEmprestimo(arrayEmprestimo.get(i).getIdEmprestimo()))+"&idCategoria="+emprestimoDAO.retornaIdCategoriaPorIdReferencia(emprestimoDAO.retornaIdReferenciaPorIdEmprestimo(arrayEmprestimo.get(i).getIdEmprestimo()))+"&idBiblioteca="+emprestimoDAO.retornaIdBibliotecaPorIdReferencia(emprestimoDAO.retornaIdReferenciaPorIdEmprestimo(arrayEmprestimo.get(i).getIdEmprestimo()))+"&idReferencia="+emprestimoDAO.retornaIdReferenciaPorIdEmprestimo(arrayEmprestimo.get(i).getIdEmprestimo())+"&situacaoDescricao="+arrayEmprestimo.get(i).getSituacaoDescricao()+"&idSituacaoEmprestimo="+arrayEmprestimo.get(i).getSituacaoEmprestimo()+"' class='btn'><img src='img/visualizar.png' style='width: 30px; height: 25px'></a>");
+                                    %>
                                 </div>
                             </div>
                         </div>
