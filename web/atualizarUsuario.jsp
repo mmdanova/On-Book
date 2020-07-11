@@ -111,7 +111,7 @@
             <div class="col"></div>
           </div>
               <div class="form-group float-right" style="margin-right: 180px">
-                <button type="submit" id="btnCancelar" class="btn btn-danger">Cancelar</button>
+                <a onclick="history.go(-1);" id="btnCancelar" class="btn btn-danger" style="color:white;">Cancelar</a>
                 <button type="submit" id="btnSalvarUsuario" class="btn btn-success">Salvar</button>
               </div>
         </div>

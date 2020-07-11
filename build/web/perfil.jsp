@@ -42,7 +42,7 @@
 
         <nav class="navbar bg-dark">
           <h4 style="color: white">Meu Perfil</h4>
-          <a href="novoUsuario.html"><img src="img/adicionar.png" style="width: 30px; height: 30px; margin-right: 20px;"></a>
+          <a href="novoUsuario.jsp"><img src="img/adicionar.png" style="width: 30px; height: 30px; margin-right: 20px;"></a>
         </nav>
 
         <div class="container-fluid bg-light" style="margin-top: 50px">
@@ -60,7 +60,7 @@
                       </div>
                       <div class="text-center" style="border-top: solid 1px;">
                         <a href="#" class="btn "><img src="img/excluir.png" style="width: 25px; height: 25px"></a>
-                        <a href="atualizarUsuario.html" class="btn "><img src="img/editar.png" style="width: 25px; height: 25px"></a>
+                        <a href="atualizarUsuario.jsp" class="btn "><img src="img/editar.png" style="width: 25px; height: 25px"></a>
                     </div>
                   </div>
               </div>
